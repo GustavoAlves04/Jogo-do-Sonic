@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.bola-de-ferro{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: bola-animation 3s infinite linear;
+}
+
+.sonic{
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump-sonic 500ms ease-out;
+}
+
+.sprite{
+    width: 70px;
+    position: absolute;
+    bottom: 150px;
+    animation: bola-animation 3s infinite linear;
+}
+@keyframes bola-animation{
+    from{
+        right: -100px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump-sonic{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
