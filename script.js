@@ -15,9 +15,15 @@ const loop = setInterval (()=>{
     const bolaPosition = bola.offsetLeft
     const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px', '')
 
-    if(bolaPosition <= 80 && bolaPosition > 0 && sonicPosition < 120){
+    if(bolaPosition <= 120 && bolaPosition > 0 && sonicPosition < 80){
         bola.style.animation = 'none'
         bola.style.left = `${bolaPosition}px`
+
+        sonic.style.animation = 'none'
+        sonic.style.left = `${sonicPosition}px`
+
+        sonic.src = './img/sonic-gameover.gif'
+        sonic.style.width = '100px'
     }
 
 },10)
