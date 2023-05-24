@@ -16,7 +16,7 @@
 .bola-de-ferro{
     position: absolute;
     bottom: 0;
-    width: 100px;
+    width: 110px;
     animation: bola-animation 3s infinite linear;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .jump{
-    animation: jump-sonic 500ms ease-out;
+    animation: jump-sonic 550ms ease-out;
 }
 
 .sprite{
