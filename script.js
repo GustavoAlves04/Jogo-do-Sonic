@@ -13,9 +13,9 @@ const jump = () => {
 const loop = setInterval (()=>{
 
     const bolaPosition = bola.offsetLeft
-    const sonicPosition = window.getComputedStyle(sonic).bottom
+    const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px', '')
 
-    if(bolaPosition <= 80){
+    if(bolaPosition <= 80 && bolaPosition > 0 && sonicPosition < 120){
         bola.style.animation = 'none'
         bola.style.left = `${bolaPosition}px`
     }

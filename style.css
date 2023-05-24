@@ -16,12 +16,12 @@
 .bola-de-ferro{
     position: absolute;
     bottom: 0;
-    width: 110px;
-    animation: bola-animation 3s infinite linear;
+    width: 145px;
+    animation: bola-animation 1.5s infinite linear;
 }
 
 .sonic{
-    width: 100px;
+    width: 130px;
     position: absolute;
     bottom: 0;
 }
@@ -30,12 +30,6 @@
     animation: jump-sonic 550ms ease-out;
 }
 
-.sprite{
-    width: 70px;
-    position: absolute;
-    bottom: 150px;
-    animation: bola-animation 3s infinite linear;
-}
 @keyframes bola-animation{
     from{
         right: -100px;
