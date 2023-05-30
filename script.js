@@ -17,7 +17,7 @@ const loop = setInterval(() => {
     .getComputedStyle(sonic)
     .bottom.replace('px', '');
 
-  if (bolaPosition <= 140 && bolaPosition > 0 && sonicPosition < 120) {
+  if (bolaPosition <= 135 && bolaPosition > 0 && sonicPosition < 120) {
     bola.style.animation = 'none';
     bola.style.left = `${bolaPosition}px`;
 
@@ -31,7 +31,7 @@ const loop = setInterval(() => {
     clouds.style.animation = 'none';
 
     clearInterval(loop);
-    swal('VOCÊ PERDEU O GAME!', {
+    swal('VOCÊ PERDEU O GAME!' + '\n' + 'APERTE F5 E TENTE NOVAMENTE.', {
       button: true,
     });
   }
