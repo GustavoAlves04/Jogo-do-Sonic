@@ -1,5 +1,6 @@
 const sonic = document.querySelector('.sonic');
 const bola = document.querySelector('.bola-de-ferro');
+const clouds = document.querySelector('.clouds');
 
 const jump = () => {
   sonic.classList.add('jump');
@@ -8,9 +9,6 @@ const jump = () => {
     sonic.classList.remove('jump');
   }, 500);
 
-  if (sonic.classList.add('jump')) {
-    sonic.src = './img/sonic-rolling.gif';
-  }
 };
 
 const loop = setInterval(() => {
@@ -30,7 +28,12 @@ const loop = setInterval(() => {
     sonic.style.width = '100px';
     sonic.style.marginLeft = '50px';
 
+    clouds.style.animation = 'none';
+
     clearInterval(loop);
+    swal('VOCÊ PERDEU O GAME!', {
+      button: true,
+    });
   }
 }, 10);
 
